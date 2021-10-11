@@ -2,15 +2,15 @@ version: 2.1
 orbs:
   ruby: circleci/ruby@1.1.2
 
-  jobs:
-    build:
-      docker:
-        - image: circleci/ruby:2.7
-      working_directory: ~/wakame-covid-19-app/src
-      steps:
-        - checkout:
-          path: ~/wakame-covid-19-app
-        - ruby/install-deps
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.7
+    working_directory: ~/wakame-covid-19-app/src
+    steps:
+      - checkout:
+        path: ~/wakame-covid-19-app
+      - ruby/install-deps
 
   test:
     docker:
