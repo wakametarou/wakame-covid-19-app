@@ -3,7 +3,7 @@ orbs:
   ruby: circleci/ruby@1.1.2
 
   jobs:
-      build:
+    build:
       docker:
         - image: circleci/ruby:2.7
       working_directory: ~/wakame-covid-19-app/src
