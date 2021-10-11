@@ -27,15 +27,15 @@ jobs:
       RAILS_ENV: test
     working_directory: ~/wakame-covid-19-app/src
     steps:
-        - checkout:
-          path: ~/wakame-covid-19-app
-        - ruby/install-deps
-        - run:
-          name: Database setup
-          command: bundle exec rails db:migrate
-        - run:
-          name: test
-          command: bundle exec rake test
+      - checkout:
+        path: ~/wakame-covid-19-app
+      - ruby/install-deps
+      - run:
+        name: Database setup
+        command: bundle exec rails db:migrate
+      - run:
+        name: test
+        command: bundle exec rake test
 
 workflows:
   version: 2
