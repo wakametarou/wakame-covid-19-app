@@ -28,14 +28,14 @@ jobs:
     working_directory: ~/wakame-covid-19-app/src
     steps:
       - checkout:
-        path: ~/wakame-covid-19-app
+          path: ~/wakame-covid-19-app
       - ruby/install-deps
       - run:
-        name: Database setup
-        command: bundle exec rails db:migrate
+          name: Database setup
+          command: bundle exec rails db:migrate
       - run:
-        name: test
-        command: bundle exec rake test
+          name: test
+          command: bundle exec rake test
 
 workflows:
   version: 2
@@ -43,5 +43,5 @@ workflows:
     jobs:
       - build
       - test:
-        requires:
-          - build
+          requires:
+            - build
