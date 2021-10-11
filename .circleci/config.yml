@@ -9,7 +9,7 @@ jobs:
     working_directory: ~/wakame-covid-19-app/src
     steps:
       - checkout:
-        path: ~/wakame-covid-19-app
+          path: ~/wakame-covid-19-app
       - ruby/install-deps
 
   test:
